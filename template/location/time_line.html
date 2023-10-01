@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <center>
+        <h1>Time line Table</h1>
+        <table border="1">
+            {%for task in list%}
+            <thead>
+            <th>{{task.task}}-{{task.id}}</th>
+            <thead>
+            <td>{{task.time_line}}To{{task.time_line_end}}</td>
+            {%endfor%}
+        </table>
+    </center>
+    </body>
+</html>

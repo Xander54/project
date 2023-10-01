@@ -1,0 +1,40 @@
+{% comment %} <h1>hello</h1>
+{%if questions %}
+{%for question in questions%}
+<h2>{{question.text}}:{{question.time}}</h2>
+{%endfor%}
+{%else%}
+<h2>no question!</h2>
+{%endif%}
+
+<center><form method="POST">
+    {% csrf_token %}
+<h2>Question:</h2><br>
+   <p> <input type="text" name='question' /></p>
+<h2>Choices:</h2><br>
+<h2>Chocie 1:</h2><br>
+<p> <input type="text" name='choice1' /></p>
+<h2>Chocie 2:</h2><br>
+<p> <input type="text" name='choice2' /></p>
+<h2>Chocie 3:</h2><br>
+<p> <input type="text" name='choice3' /></p>
+<p> <input type="submit" value='Create' /></p>
+</form>
+</center> {% endcomment %}
+<center><form method="POST">
+    {% csrf_token %}
+<fieldset>
+    <legend>SginIn</legend>
+<h2>Username:</h2><br>
+   <p> <input type="text" name='username' /></p>
+
+<h2>Email:</h2><br>
+<p> <input type="email" name='email' /></p>
+<h2>Password:</h2><br>
+<p> <input type="password" name='password' /></p>
+<h2>Confrim Password:</h2><br>
+<p> <input type="password" name='password1' /></p>
+<p> <input type="submit" value='Regiter' /></p>
+</form>
+</center>
+</fieldset>

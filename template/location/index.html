@@ -1,0 +1,23 @@
+<html>
+<head>
+<title>
+Template
+</title>
+</head>
+
+<body>
+<h2>{{message}}</h2>
+<form method="POST">
+    {%csrf_token%}
+    
+    <input type="text" name="task">
+    <input type='time' name='time_line'> TO
+    <input type='time' name='time_line_end'>
+
+    <input type="submit" value="Add">
+    <input type="reset" value="Rest">
+
+</form>
+
+</body>
+</html>
